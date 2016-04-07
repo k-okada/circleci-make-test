@@ -2,21 +2,11 @@ machine:
   services:
     - docker
 
-dependencies:
-
-  cache_directories:
-#    - "~/docker"
-#    - "~/.vagrant.d"
-
-#  pre:
-#    - make -C vagrant
-#    - mkdir -p ~/docker
-#    - docker build -t test .
-#    - docker save test > ~/docker/test.tar
-
 test:
   override:
     # check docker
-    - echo "Running Tests"
-    - make -d
+    - echo "Running Tests 1"
+    - make -d -f Makefile.ok
+    - echo "Running Tests 2"
+    - make -d -f Makefile.ng
 

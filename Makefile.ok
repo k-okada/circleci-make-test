@@ -1,0 +1,11 @@
+##
+## create vagrant running docker inside
+##  on circleic, use aws installed by circleci.yml
+##
+all: all-echo
+
+include color.mk
+
+all-echo:
+	$(call colorecho, "test make commands")
+	echo "test make commands"
