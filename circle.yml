@@ -1,0 +1,10 @@
+# machine:
+#   services:
+#     - docker
+
+test:
+  override:
+    # check docker
+    - echo "Running Tests"
+    - make -d
+
