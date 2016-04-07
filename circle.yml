@@ -2,6 +2,16 @@ machine:
   services:
     - docker
 
+dependencies:
+
+  cache_directories:
+    - "~/docker"
+
+  pre:
+    - mkdir -p ~/docker
+    - docker build -t test .
+    - docker save test > ~/docker/test.tar
+
 test:
   override:
     # check docker
