@@ -5,14 +5,14 @@ machine:
 dependencies:
 
   cache_directories:
-    - "~/docker"
+#    - "~/docker"
     - "~/.vagrant.d"
 
   pre:
     - make -C vagrant
-    - mkdir -p ~/docker
-    - docker build -t test .
-    - docker save test > ~/docker/test.tar
+#    - mkdir -p ~/docker
+#    - docker build -t test .
+#    - docker save test > ~/docker/test.tar
 
 test:
   override:
