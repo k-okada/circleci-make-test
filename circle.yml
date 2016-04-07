@@ -9,7 +9,7 @@ dependencies:
     - "~/.vagrant.d"
 
   pre:
-    - make -C vagrant
+    #- make -C vagrant
     - mkdir -p ~/docker
     - docker build -t test .
     - docker save test > ~/docker/test.tar
